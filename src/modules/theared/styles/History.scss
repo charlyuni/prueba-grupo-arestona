@@ -1,0 +1,30 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.history {
+  padding: 2rem;
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__item {
+    background-color: $light-gray;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    p {
+      margin-bottom: 0.2rem;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+}

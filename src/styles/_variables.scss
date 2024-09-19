@@ -1,0 +1,33 @@
+//colors
+$primary-color: #007bff;
+$success-color: #28a745;
+$warning-color: #ffc107;
+$light-gray: #f8f9fa;
+$dark-gray: #6c757d;
+$white: #ffffff;
+$black: #000000;
+$menu-lateral-color: #343a40;
+$footer-background-color: #343a40;
+$footer-text-color: #ffffff;
+$secondary-color: #6c757d;
+$danger-color: #dc3545;
+$info-color: #17a2b8;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$dark: #343a40;
+$gray: #6c757d;
+
+// Tipografía
+$font-family-sans-serif: 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-sm: 0.875rem;
+
+// Espaciados
+$spacer: 1rem;
+$spacer-lg: 2rem;
+$spacer-sm: 0.5rem;
+
+// Z-index
+$zindex-navbar: 1000;
+$zindex-modal: 1050;

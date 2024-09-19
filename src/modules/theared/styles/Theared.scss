@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.theared {
+  padding-top: 55px;
+
+  &__main {
+    padding: 0rem;
+    background-color: $light-gray;
+  }
+}

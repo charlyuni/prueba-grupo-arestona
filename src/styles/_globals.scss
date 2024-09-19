@@ -1,0 +1,33 @@
+@import './_variables';
+@import './_mixins';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  color: $dark-color;
+  line-height: 1.6;
+  background-color: $light-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
