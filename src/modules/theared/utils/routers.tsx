@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { ThreadProvider } from '../../../contexts/Thread.context';
+import { Loading } from '../../../components';
 
 const ThreadLoader = React.lazy(() => import('../components/Loader'));
 const Theared = React.lazy(() => import('../Theared'));
@@ -7,25 +8,24 @@ const RootLayout = React.lazy(() => import('../../../layouts/RootLayout'));
 const Headers = React.lazy(
   () => import('../../../modules/theared/components/Header')
 );
-
 const threadRoutes = [
   {
-    path: ':cfskey',
+    path: ':cfskey/:cfstoken',
     element: (
       <ThreadProvider>
-        <RootLayout Header={Headers} />
+        <Suspense fallback={<Loading />}>
+          <ThreadLoader />
+        </Suspense>
       </ThreadProvider>
     ),
     children: [
       {
-        path: ':cfstoken',
-        element: <ThreadLoader />,
-        children: [
-          {
-            index: true,
-            element: <Theared />,
-          },
-        ],
+        index: true,
+        element: (
+          <RootLayout Header={Headers}>
+            <Theared />
+          </RootLayout>
+        ),
       },
     ],
   },
